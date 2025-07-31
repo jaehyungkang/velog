@@ -32,7 +32,7 @@ for entry in feed.entries:
 
     if not os.path.exists(file_path):
         with open(file_path, 'w', encoding='utf-8') as file:
-            file.write(entry.discription) # 글 내용을 파일에 쓰기
+            file.write(entry.description) # 글 내용을 파일에 쓰기
         repo.git.add(file_path) # 깃에 파일 추가
         repo.git.commit('-m', f'Add post: {entry.title}') # 커밋
   
